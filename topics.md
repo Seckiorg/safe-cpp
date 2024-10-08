@@ -18,34 +18,34 @@
 * `impl`
 * `self`
 
-## _safe-specifier_
+## _safe-belirteci_
 
-`safe` is a specifier like _noexcept-specifier_.
-`safe` is an operator like _noexcept-operator_.
+`safe`, _noexcept-specifier_ gibi bir belirteçtir.
+`safe`, _noexcept-operator_ gibi bir işleçtir.
 
-Inside a safe context:
-* Cannot dereference pointers or legacy references.
-* Cannot perform pointer arithmetic or difference.
-* Cannot use _asm-statement_.
-* Cannot access non-const objects with static storage duration.
-* Cannot name union alternatives.
-* Cannot call unsafe functions, since those may include any of the above.
-* Other? What kinds of conversions?
+Bir safe bağlamının içinde:
+* Göstericiler ya da eski başvurular dolaylanamaz.
+* Gösterici aritmetiği ya da ayrımı yapılamaz.
+* _asm-statement_ kullanılamaz.
+* Değişmez olmayan, duruk saklama süreli nesnelere erişilemez.
+* Birlik seçenekleri adlandırılamaz.
+* Yukarıdakilerden birini içerebileceğinden, güvenliksiz işlevler çağrılamaz.
+* Başka? Ne tür dönüşümler?
 
-##  _lifetime-parameters-list_ and _where-clauses_
-
-TODO
-
-## Borrow types `T^` with lifetime arguments `T^/a`
+##  _lifetime-parameters-list_ ve _where-clauses_
 
 TODO
 
-## Relocation operator.
+##  `T^/a` yaşam süresi argümanlarıyla `T^` Ödünç türleri 
 
-`operator rel()` is the relocation constructor. It has three implicitly-defined versions:
+TODO
+
+## Yerdeğiştirme işleci.
+
+`operator rel()` yerdeğiştirme yapıcısıdır. It has three implicitly-defined versions:
 1. `= trivial` - trivial relocation.
-1. `= delete` - pinned.
-1. `= default` - default relocation.
+2. `= delete` - pinned.
+3. `= default` - default relocation.
 
 ## rel and cpy expersions
 
